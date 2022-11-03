@@ -2,14 +2,14 @@
 """
 Created on Mon Oct 24 21:02:50 2022
 
-@author: Irene
+@author: Irene Muñoz Castro
 
 Cifrado de claves:
     
     Están:
         Clave murciélago           * string = claveMurcielago(texto) *
         Clave Abecedario o inversa * string = claveABC(texto) *
-        Clave Malespín (Pita mobe) * string = claveMalespin(texto) *
+        Clave Malespín (PITA-MOBE) * string = claveMalespin(texto) *
         Clave Numérica             * string = claveNumerica(texto) *
         
     Las entradas NO deben contener ninguna palabra tildada y deben estar 
@@ -25,14 +25,13 @@ Cifrado de claves:
     
     Cualquier otro caracter no verá ningún cambio y se escribirá tal y 
     como viene.
-    
 """
 def claveABC(texto):
     longitud=len(texto) #Calculamos la longitud del texto para recorrerlo
     mensajecifrado = ""
     #print(longitud)
-    #print("msj: "+ mensajecifrado)
-    print("msj entrada para abecedario/inversa: "+texto)
+    print('ABECEDARIO/INVERSA')
+    print("msj entrada: "+texto)
     for i in range (0,longitud): #Bucle para recorrer el texto
         if texto[i] == " ":
             mensajecifrado = mensajecifrado + " "
@@ -104,16 +103,15 @@ def claveABC(texto):
             mensajecifrado = mensajecifrado + "A"
         else:
             mensajecifrado = mensajecifrado + texto[i]
-    print('\n')
-    print('msj salida para abecedario: '+mensajecifrado)
+    print('msj salida:  '+mensajecifrado+'\n')
     return mensajecifrado
 
 def claveMalespin(texto):
     longitud=len(texto) #Calculamos la longitud del texto para recorrerlo
     mensajecifrado = ""
     #print(longitud)
-    #print("msj: "+ mensajecifrado)
-    print("msj entrada para malespin: "+texto)
+    print('MALESPÍN')
+    print("msj entrada: "+texto)
     for i in range (0,longitud): #Bucle para recorrer el texto
         if texto[i] == " ":
             mensajecifrado = mensajecifrado + " "
@@ -147,8 +145,7 @@ def claveMalespin(texto):
             mensajecifrado = mensajecifrado + "A"
         else:
             mensajecifrado = mensajecifrado + texto[i]
-    print('\n')
-    print('msj salida para malespín: '+mensajecifrado)
+    print('msj salida:  '+mensajecifrado+'\n')
     return mensajecifrado
 
 def claveMurcielago(texto):
@@ -156,7 +153,8 @@ def claveMurcielago(texto):
     mensajecifrado = ""
     #print(longitud)
     #print("msj: "+ mensajecifrado)
-    print("msj entrada para murciélago: "+texto)
+    print('MURCIÉLAGO')
+    print("msj entrada: "+texto)
     for i in range (0,longitud): #Bucle para recorrer el texto
         if texto[i] == " ":
             mensajecifrado = mensajecifrado + " "
@@ -194,25 +192,24 @@ def claveMurcielago(texto):
             mensajecifrado = mensajecifrado + "9"
         else:
             mensajecifrado = mensajecifrado + texto[i]
-    print('\n')
-    print('msj salida para murciélago: '+mensajecifrado)
+    print('msj salida:  '+mensajecifrado+'\n')
     return mensajecifrado
 
 def claveNumerica(texto):
     longitud=len(texto) #Calculamos la longitud del texto para recorrerlo
     mensajecifrado = ""
-    #print(longitud)
+    print('NUMÉRICA')
     #print("msj: "+ mensajecifrado)
-    print("msj entrada para numérica: "+texto)
+    print("msj entrada: "+texto)
     for i in range (0,longitud): #Bucle para recorrer el texto
         if texto[i] == " ":
-            mensajecifrado = mensajecifrado + "/"
+            mensajecifrado = mensajecifrado + "/."
         elif texto[i] == ",":
             mensajecifrado = mensajecifrado + ","
         elif texto[i] == "\"":
             mensajecifrado = mensajecifrado + "\""
         elif texto[i] == "-":
-            mensajecifrado = mensajecifrado + "--"
+            mensajecifrado = mensajecifrado + "-"
         elif texto[i] == ".":
             mensajecifrado = mensajecifrado + "//"
         elif texto[i] == "¿":
@@ -275,17 +272,8 @@ def claveNumerica(texto):
             mensajecifrado = mensajecifrado + "27."
         else:
             mensajecifrado = mensajecifrado + texto[i]
-    print('\n')
-    print('msj salida para numérica: '+mensajecifrado)
+    print('msj salida:  '+mensajecifrado+'\n')
     return mensajecifrado
-
-#a = claveABC("PREGUNTATE SI LO QUE ESTAS HACIENDO HOY TE ACERCA AL LUGAR EN EL QUE QUIERES ESTAR MAÑANA.")
-#print("eso es a: "+a)
-#b = claveMalespin("CUELQUOAR CISE ASBI AS PELASMON")
-#print("esto es b: "+b)
-#c = claveNumerica('"ABCDEF GHIJKL.MNÑO, PQRST\ "MENSAJE" -UVW XYZ')
-#e = claveMurcielago('HOLA SOY IRENE ESTO ES CLAVE MURCIELAGO')
-#print('esto es e: ' + e)
 
 msj1 = '“PREGUNTATE SI LO QUE ESTAS HACIENDO HOY TE ACERCA AL LUGAR EN EL QUE QUIERES ESTAR MAÑANA.” -WALT DISNEY'
 msj2 = '“SERVICIO ES HACER A UN LADO EL PLACER O LA CONVENIENCIA PARA TENDER LA MANO AL NECESITADO.” -BADEN POWELL'
@@ -294,6 +282,14 @@ msj4 = '“¿DE QUE SIRVE GANAR MIL BATALLAS SI NO PUEDES VENCER TUS PROPIAS PAS
 msj5 = '"QUIERO SER LA MEJOR VERSION DE MI MISMA." -HANNA GABRIELS'
 msj6 = '“… LA VIDA NO LLEGA A UNO CON UN SENTIDO, SINO QUE EN SU TRANSCURRIR LE OTORGA A LA PERSONA UNA SERIE DE POTENCIAS, DE RECURSOS, PARA QUE UNO SEA QUIEN LE DE UN SENTIDO.” -LILIA RAMOS'
 
-msjCod1 = claveMalespin(msj5)
-#msjCod2 = claveNumerica(msjCod1)
+#msj1males = claveMalespin(msj1)
+
+original = input("Introduce el mensaje para cifrar: ")
+print("")
+
+males = claveMalespin(original)
+numi = claveNumerica(original)
+murci = claveMurcielago(original)
+abeci = claveABC(original)
+
 #print(msjCod1)
