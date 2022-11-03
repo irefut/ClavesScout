@@ -1,4 +1,4 @@
-    # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 Created on Mon Oct 24 21:02:50 2022
 
@@ -295,6 +295,5 @@ msj5 = '"QUIERO SER LA MEJOR VERSION DE MI MISMA." -HANNA GABRIELS'
 msj6 = '“… LA VIDA NO LLEGA A UNO CON UN SENTIDO, SINO QUE EN SU TRANSCURRIR LE OTORGA A LA PERSONA UNA SERIE DE POTENCIAS, DE RECURSOS, PARA QUE UNO SEA QUIEN LE DE UN SENTIDO.” -LILIA RAMOS'
 
 msjCod1 = claveMalespin(msj5)
-msjCod2 = claveNumerica(msjCod1)
-
+#msjCod2 = claveNumerica(msjCod1)
 #print(msjCod1)
